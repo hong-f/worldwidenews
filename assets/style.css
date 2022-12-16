@@ -1,0 +1,10 @@
+
+
+nav{
+    background-color: grey;
+}
+aside{
+    background-color: grey;
+    border: solid black 5px; 
+    border-radius: .3rem;
+}
