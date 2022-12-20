@@ -5,7 +5,7 @@ var search_history = JSON.parse(localStorage.getItem("search_history")) || [];
 
 
 function renderHistory() {
-
+    //create search history buttons
 	for (let i = 0; i < search_history.length; i++) {
         let history_button = $("<button>");
         history_button.attr("id",search_history[i]);
@@ -20,21 +20,10 @@ function renderHistory() {
 		return;
 	}
 };
-// $("#history .button").on("click", function(event) {
-//     event.preventDefault();
-//     search_term = $(this).text();
-//     handleEvent();
-// });
-// $("#clear_history").click(function(){
-//     localStorage.clear();
-//     $("#search_history").empty();
-// })
+
 submit_button.on('click', function(event){
     event.preventDefault();
     search_term = $('input[id="searchbar"]').val().trim();
-    // if(JSON.parse(localStorage.getItem("search_history")).includes(search_term)){
-    //     window.localStorage.removeItem(search_term);
-    // }
     if (!search_history.includes(search_term)){
         search_history.push(search_term);
         localStorage.setItem("search_history", JSON.stringify(search_history));

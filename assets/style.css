@@ -3,3 +3,11 @@
 nav{
     background-color: grey;
 }
+#history{
+    justify-content:center;
+}
+button {
+    display:block;
+    margin: 4px;
+    justify-content: center;
+}
