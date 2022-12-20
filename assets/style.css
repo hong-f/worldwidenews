@@ -3,8 +3,11 @@
 nav{
     background-color: grey;
 }
-aside{
-    background-color: grey;
-    border: solid black 5px; 
-    border-radius: .3rem;
+#history{
+    justify-content:center;
+}
+button {
+    display:block;
+    margin: 4px;
+    justify-content: center;
 }
