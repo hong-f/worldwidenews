@@ -2,8 +2,12 @@ var submit_button = $("#submit");
 var search_history_elem = $("#history");
 var search_term = "";
 var search_history = JSON.parse(localStorage.getItem("search_history")) || [];
+var city = "New York";
+
+=======
 var title_1 = $(".card-title1");
 var title_2 = $(".card-title2");
+
 
 function renderHistory() {
     //create search history buttons
@@ -82,3 +86,17 @@ fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&langu
 })
 
 }
+
+// landing
+function landing() {
+
+	var blankCity = JSON.parse(localStorage.getItem("city"));
+
+	if (blankCity !== null) {
+		search_history = blankCity;
+	}
+	renderHistory();
+	handleEvent();
+};
+
+landing();
