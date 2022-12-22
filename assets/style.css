@@ -1,11 +1,76 @@
+
+
 nav{
     background-color: grey;
 }
-#history{
-    justify-content:center;
+#history {
+  justify-content: center;
 }
+#submit {
+  align-items: center;
+  background-color: rgb(17, 167, 167);
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  width: 280px;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
+  padding-left: 0 16px 0 16px;
+  position: relative;
+  transition: box-shadow 0.15s, transform 0.15s;
+  will-change: box-shadow, transform;
+  font-size: 20px;
+}
+
 button {
-    display:block;
-    margin: 4px;
-    justify-content: center;
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  width: 280px;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
+  padding-left: 0 16px 0 16px;
+  position: relative;
+  transition: box-shadow 0.15s, transform 0.15s;
+  will-change: box-shadow, transform;
+  font-size: 15px;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.page-footer {
+  background-color: grey;
+  max-width: 100%;
+  vertical-align: baseline;
+  display: flex;
+  flex-direction: column;
+}
+
+#subscribeBtn {
+  background-color: rgb(17, 167, 167);
+  color: white;
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
