@@ -2,6 +2,10 @@ var submit_button = $("#submit");
 var search_history_elem = $("#history");
 var search_term = "";
 var search_history = JSON.parse(localStorage.getItem("search_history")) || [];
+var city = "New York";
+var title_1 = $(".card-title1");
+var title_2 = $(".card-title2");
+const loader = document.querySelector("#loading");
 
 
 function renderHistory() {
@@ -20,7 +24,10 @@ function renderHistory() {
 		return;
 	}
 };
-
+$("#clear_history").click(function(){
+    localStorage.clear();
+    $("#history").empty();
+})
 submit_button.on('click', function(event){
     event.preventDefault();
     search_term = $('input[id="searchbar"]').val().trim();
@@ -34,7 +41,6 @@ submit_button.on('click', function(event){
 function handleEvent(){
     $("#current_events").empty();
     $("#top_stories").empty();
-  
 fetch('https://gnews.io/api/v4/search?q='+search_term+'&token=437a0f75f8fcd5bea6ffe790f53596f5&lang=en&country=us&max=1', {
     method: "GET",
     credentials:"same-origin",
@@ -67,6 +73,7 @@ fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&langu
 .then(function (data){
     console.log(data);
     for (let i = 0; i <data.news.length; i++) {
+        $("#current_events").append(title_2);
         $("#current_events").append("<h5 id='current_headline"+i+"' class='headline card-title'>"+data.news[i].title+"</h5>");
         if (data.news[i].image != "None"){
         $("#current_events").append("<img class='card-image' id='current_image"+i+"' src='"+data.news[i].image+"'>");
@@ -79,3 +86,19 @@ fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&langu
 })
 
 }
+
+}
+
+// landing
+function landing() {
+
+	var blankCity = JSON.parse(localStorage.getItem("city"));
+
+	if (blankCity !== null) {
+		search_history = blankCity;
+	}
+	renderHistory();
+	handleEvent();
+};
+
+landing();
