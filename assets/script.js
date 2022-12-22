@@ -4,7 +4,7 @@ var search_term = "";
 var search_history = JSON.parse(localStorage.getItem("search_history")) || [];
 var city = "New York";
 
-=======
+
 var title_1 = $(".card-title1");
 var title_2 = $(".card-title2");
 
