@@ -83,7 +83,7 @@ fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&langu
 // landing
 function landing() {
 
-	var blankCity = JSON.parse(localStorage.getItem("city"));
+	var blankCity = JSON.parse(localStorage.getItem("search_history"));
 
 	if (blankCity !== null) {
 		search_history = blankCity;
