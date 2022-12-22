@@ -86,10 +86,10 @@ function landing() {
 	var blankCity = JSON.parse(localStorage.getItem("city"));
 
 	if (blankCity !== null) {
-		searchCity = blankCity;
+		search_history = blankCity;
 	}
-	getHistory();
-	getCurrentWeather();
+	renderHistory();
+	handleEvent();
 };
 
 landing();
