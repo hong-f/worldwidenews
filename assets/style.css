@@ -52,7 +52,12 @@ button {
   will-change: box-shadow, transform;
   font-size: 15px;
 }
-
+.card{
+    max-width: 50%;
+}
+.card img{
+    max-width: 100%;
+}
 button:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
