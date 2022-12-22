@@ -2,11 +2,6 @@ var submit_button = $("#submit");
 var search_history_elem = $("#history");
 var search_term = "";
 var search_history = JSON.parse(localStorage.getItem("search_history")) || [];
-var city = "New York";
-
-=======
-var title_1 = $(".card-title1");
-var title_2 = $(".card-title2");
 
 
 function renderHistory() {
@@ -53,11 +48,10 @@ fetch('https://gnews.io/api/v4/search?q='+search_term+'&token=437a0f75f8fcd5bea6
 })
 .then(function (data){
     console.log(data);
-    $("#top_stories").append(title_1);
     $("#top_stories").append("<h5 id='top_headline' class='headline card-title'>"+data.articles[0].title+"</h5>");
     $("#top_stories").append("<img id='top_image' src='"+data.articles[0].image+"'>");
     $("#top_stories").append("<p  class='card-content' id='top_desc'>"+data.articles[0].description+"</p>");
-    $("#top_stories").append("<a class='card-action' target='blank' id='top_link' href='"+data.articles[0].url+"'>Read more</a>");
+    $("#current_events").append("<a class='card-action' target='blank' id='top_link' href='"+data.articles[0].url+"'>Read more</a>");
 })
 fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&language=en&apiKey=XzqeSfMWEQK7BqkJoQDQEDAHiQPeTIGxBbBaOzzVvTabs5Qd&page_size=3', {
     method: "GET", 
@@ -73,30 +67,15 @@ fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&langu
 .then(function (data){
     console.log(data);
     for (let i = 0; i <data.news.length; i++) {
-        $("#current_events").append(title_2);
         $("#current_events").append("<h5 id='current_headline"+i+"' class='headline card-title'>"+data.news[i].title+"</h5>");
         if (data.news[i].image != "None"){
         $("#current_events").append("<img class='card-image' id='current_image"+i+"' src='"+data.news[i].image+"'>");
         }
         $("#current_events").append("<p class='card-content'id='current_desc"+i+"'>"+data.news[i].description+"</p>");
-        $("#current_events").append("<a class='card-action' target='blank' id='current_link"+i+"' href='"+data.news[i].url+"'>Read more</a>");
+        $("#current_events").append("<a class='card-action' target='blank' id='current_link"+i+"' href='"+data.news[i].link+"'>Read more</a>");
         
     }
    
 })
 
 }
-
-// landing
-function landing() {
-
-	var blankCity = JSON.parse(localStorage.getItem("city"));
-
-	if (blankCity !== null) {
-		search_history = blankCity;
-	}
-	renderHistory();
-	handleEvent();
-};
-
-landing();
