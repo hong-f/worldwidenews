@@ -1,58 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Compiled and minified CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./assets/style.css"/>
     <title>Worldwide Headlines</title>
 </head>
-<body>
-      
-    <header>
-      <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo">Worldwide Headlines</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/hong-f/worldwidenews" target="_blank">About</a></li>
-              </ul>
-            </div>
-          </nav>
+<body>  
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Worldwide Headlines</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="https://github.com/hong-f/worldwidenews" target="_blank">About</a></li>
+            </ul>
+          </div>
+        </nav>
        </div>         
     </header>
   <main>
     <div class="row">
-
       <aside class="col s12 m3 l4 sidebar"> 
         <form id="search_input">
-
           <input type="text" id="searchbar" placeholder="Search city here">
           <input type="submit" id="submit">
-      </form>
-      <div id="history"></div>
-      <button id="clear_history">Clear History</button>
+        </form>
+        <div id="history"></div>
+        <button id="clear_history">Clear History</button>
       </aside>
-
       <section class="col s12 m9 l8 top"> 
         <h2 class="card-title1">Top Stories</h1>
-          <div id="top_stories" class="row">
-          </div>
-          <h2 class="card-title2">Current Events</h2>
-          <div class="row" id="current_events">
-                   
-          </div>
+          <div id="top_stories" class="row"></div>
+        <h2 class="card-title2">Current Events</h2>
+          <div class="row" id="current_events"></div>
       </section>
-
       <div id="loader"class="preloader-wrapper big active hidden">
         <div class="spinner-layer spinner-blue-only">
           <div class="circle-clipper left">
@@ -61,14 +51,12 @@
             <div class="circle"></div>
           </div><div class="circle-clipper right">
             <div class="circle"></div>
-          </div>
+        </div>
         </div>
       </div>
     </div>
-
     </div>
-          
-    </main>
+  </main>
     <footer class="page-footer">
       <div class="container">
         <div class="row">
