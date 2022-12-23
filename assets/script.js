@@ -47,8 +47,8 @@ function handleEvent(){
     showLoader();
     $("#current_events").empty();
     $("#top_stories").empty();
-    // getTopStories(search_term);
-    // getCurrentEvent(search_term);
+    getTopStories(search_term);
+    getCurrentEvent(search_term);
     render_top_stories(top_stories);
     render_current_events(current_events);
 }
