@@ -26,6 +26,9 @@ const openModal = function () {
   $(".btn-close").click(function(){
     closeModal();
   });
+  $(".overlay").click(function(){
+    closeModal();
+  });
 
 // Clear history button
 $("#clear_history").click(function(){
