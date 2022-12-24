@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel ="stylesheet" href="./assets/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <title>Worldwide Headlines</title>
+</head>
+<body>  
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+            <a id ="logo" href="#" class="brand-logo"><i class="fa fa-globe"></i><div id="title">Worldwide Headlines</div></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars"></i></a> 
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./about.html">About</a></li>
+              </ul>
+            </div>
+          </nav>
+         </div>  
+         <ul id="mobile-demo" class="sidenav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>        
+    </header>
+    <main class="row">
+        <div id="about" class="container offset-l2 col s12 m6">
+            <h1>About</h1>
+            <div class="divider"></div>
+            <p>This site was built using JQuery, Materialize, Font Awesome and Google Fonts, as well as the news APIs GNews and Current.</p>
+          </div>
+          <div id="about_links" class="container col s12 m4">
+            <ul>
+                <li><a href="https://github.com/hong-f/worldwidenews"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+                <li><a class="fa fa-envelope" href="https://www.gmail.com/" target="_blank">    Email</a></li>
+              <li><a class="fa fa-twitter" href="https://www.twitter.com/" target="_blank">    Twitter</a></li>
+              <li><a class="fa fa-youtube" href="https://www.youtube.com/" target="_blank">    YouTube</a></li> 
+            </ul>
+          </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Subscribe to our Newsletter</h5>
+              <input class="grey-text text-lighten-4" placeholder="Enter your email here">
+              <button id="subscribeBtn">Submit</button>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text" id="contact">Contact</h5>
+              <ul id="contact_links">
+                <li><a class="fa fa-envelope" href="https://www.gmail.com/" target="_blank">    Email</a></li>
+                <li><a class="fa fa-twitter" href="https://www.twitter.com/" target="_blank">    Twitter</a></li>
+                <li><a class="fa fa-youtube" href="https://www.youtube.com/" target="_blank">    YouTube</a></li> 
+              </ul>
+            </div>
+          </div>    
+        </div>
+      </footer>
+  
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/script.js"></script>
+  </body>
+  </html>
