@@ -34,7 +34,7 @@ const openModal = function () {
 $("#clear_history").click(function(){
     localStorage.clear();
     $("#history").empty();
-    landing();
+    // landing();
 })
 
 function renderHistory() {
@@ -47,7 +47,6 @@ function renderHistory() {
         history_button.click(function (event){
             console.log(event.target.innerHTML);
             search_term = event.target.innerHTML;
-            handleEvent();
         })
         $("#history").append(history_button);
 	} if (!search_term) {
@@ -152,15 +151,14 @@ function render_top_stories(top_stories){
                 var a = $("<a>");
                 a.attr("href",top_stories[i].url);
                 a.attr("target","_blank");
-                a.text("Read More");
-                card_action.append(a);
                 card.append(card_action);
-                parent_div.append(card);
+                parent_div.append(a);
+                a.append(card);
                 $("#top_stories").append(parent_div);
             }
 }
 async function getCurrentEvent(search_term){
-    let response = await fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&language=en&apiKey=XzqeSfMWEQK7BqkJoQDQEDAHiQPeTIGxBbBaOzzVvTabs5Qd&page_size=3', {
+    let response = await fetch('https://api.currentsapi.services/v1/search?keywords='+search_term+'&language=en&apiKey=XzqeSfMWEQK7BqkJoQDQEDAHiQPeTIGxBbBaOzzVvTabs5Qd&page_size=3', {    
         method: "GET", 
         credentials:"same-origin",
         cache: "reload" 
@@ -202,14 +200,11 @@ function render_current_events(current_events){
             var a = $("<a>");
             a.attr("href",current_events[i].url);
             a.attr("target","_blank");
-            a.text("Read More");
-            card_action.append(a);
             card.append(card_action);
-            parent_div.append(card);
+            parent_div.append(a);
+            a.append(card);
             $("#current_events").append(parent_div);
         }
 
 }
-
-
 
