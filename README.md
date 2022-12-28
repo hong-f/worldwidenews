@@ -1,3 +1,5 @@
+# Worldwide News
+
 ## Table of contents
 ​
 - [Overview](#overview)
@@ -8,8 +10,8 @@
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 
-​
-​## Overview
+
+## Overview
 ​
 ### Description
 
