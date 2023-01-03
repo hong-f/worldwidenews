@@ -34,7 +34,6 @@ const openModal = function () {
 $("#clear_history").click(function(){
     localStorage.clear();
     $("#history").empty();
-    // landing();
 })
 
 function renderHistory() {
@@ -47,6 +46,7 @@ function renderHistory() {
         history_button.click(function (event){
             console.log(event.target.innerHTML);
             search_term = event.target.innerHTML;
+            handleEvent(); 
         })
         $("#history").append(history_button);
 	} if (!search_term) {
